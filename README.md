@@ -1,7 +1,7 @@
 # TechJobs
-TechJobs - Plataforma com busca e oferta de vagas na área de T.I
+Plataforma com busca e oferta de vagas na área de T.I
 
-#GitHub Pages
+# GitHub Pages
 https://borchardttt.github.io/TechJobs/
 
 # Checkist
