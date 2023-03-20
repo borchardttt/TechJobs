@@ -8,14 +8,14 @@ https://borchardttt.github.io/TechJobs/
 
 Caixas de Diálogo
 
-- [x] prompt
-- [x] alert
-- [x] confirm
+- [] prompt
+- [] alert
+- [] confirm
 
 Temporizadores
 
-- [x] setInterval
-- [x] setTimeout
+- [] setInterval
+- [] setTimeout
 
 Funções
 
@@ -30,7 +30,7 @@ Funções
 
 Eventos
 
-- [x] Evento de carregamento do documento - onload
+- [] Evento de carregamento do documento - onload
 - [ ] Evento de movimento do mouse
 - [ ] Evento de teclado - usar charCode ou keyCode
 - [ ] Eventos de formulário - onfocus e onblur

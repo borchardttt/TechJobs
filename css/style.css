@@ -13,13 +13,21 @@ h1{
     font-size:medium
 }
 
+.iframe {
+	display: block;
+	margin: 0 auto;
+	justify-content: center;
+}
 
 .login{
   background-color: rgba(233, 255, 255, 0.829)
 }
 .login {
     margin-top: 20px;
-    max-width: 500px;
+    max-height: 600px;
+    margin-top: -10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -28,7 +36,7 @@ h1{
 .logoLogin img {
     display: block;
     margin: 0 auto;
-    max-width: 170px;
+    max-width: 35%;
     margin-bottom: 30px;
 }
 
@@ -38,7 +46,7 @@ h1{
 }
 
 .formLogin .form-group label {
-    font-weight: 600;
+    font-weight: 200;
     color: #888;
 }
 
@@ -53,7 +61,7 @@ h1{
 .formLogin button {
     border-radius: 5px;
     border: none;
-    padding: 10px;
+    margin-bottom: 10px;
     width: 100%;
     background-color: #000;
     color: #fff;
@@ -66,6 +74,63 @@ h1{
 .texto-login{
   padding: 15rem;
 }
+
+.cadastro{
+    background-color: rgba(233, 255, 255, 0.829)
+  }
+  .cadastro {
+      margin-top: 20px;
+      max-height: 600px;
+      margin-top: -20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logocadastro img {
+      display: block;
+      margin: 0 auto;
+      max-width: 30%;
+      margin-bottom: 30px;
+  }
+  
+  .cadastro-box {
+      padding: 35px;
+      width: 100%;
+  }
+  
+  .formcadastro .form-group label {
+      font-weight: 200;
+      color: #888;
+  }
+  
+  .formcadastro input {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+  }
+  
+  .formcadastro button {
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+  }
+  
+  .formcadastro button:hover {
+      background-color: #333;
+  }
+  
+  .texto-cadastro{
+    padding: 15rem;
+  }
+  
 
 p{
     font-size:medium;
