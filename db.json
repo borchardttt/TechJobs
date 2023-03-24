@@ -1,0 +1,15 @@
+{
+    "users": [
+      { "id": 1, "name": "Alef" },
+      { "id": 2, "name": "Murilo" },
+      { "id": 3, "name": "Leonardo" }
+
+    ],
+    "cidades": [
+        { "id": 1, "name": "São Paulo" },
+        { "id": 2, "name": "Guarapuava" },
+        { "id": 3, "name": "Maceió" }
+  
+      ]
+}
+  

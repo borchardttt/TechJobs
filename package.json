@@ -1,0 +1,15 @@
+{
+  "name": "techjobs",
+  "version": "1.0.0",
+  "description": "Plataforma com busca e oferta de vagas na área de T.I",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
