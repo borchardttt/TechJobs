@@ -150,3 +150,18 @@ p{
 .menu-lateral--visivel {
 left: 0;
 }
+select option:first-child {
+    font-size: 16px;
+    color: #aaa;
+  }
+  
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23777" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M224 384h576a32 32 0 0 0 22.6-9.4l128-128a32 32 0 0 0 0-45.2l-128-128A32 32 0 0 0 800 64H224a32 32 0 0 0-32 32v256a32 32 0 0 0 32 32zm320 448a32 32 0 0 0-32 32v64a32 32 0 0 0 64 0v-64a32 32 0 0 0-32-32zm0-256a32 32 0 0 0-32 32v64a32 32 0 0 0 64 0v-64a32 32 0 0 0-32-32zm-192 128a32 32 0 0 0-32 32v64a32 32 0 0 0 64 0v-64a32 32 0 0 0-32-32zm0-256a32 32 0 0 0-32 32v64a32 32 0 0 0 64 0v-64a32 32 0 0 0-32-32z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 18px 18px;
+    padding-right: 28px;
+  }
+  

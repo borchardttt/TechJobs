@@ -10,6 +10,12 @@
         { "id": 2, "name": "Guarapuava" },
         { "id": 3, "name": "Maceió" }
   
-      ]
+    ],
+    "carnes":[
+      {"id": 1, "name": "Picanha"},
+      {"id": 2, "name": "Maminha"},
+      {"id": 3, "name": "Alcatra"}
+    ]
+
 }
   

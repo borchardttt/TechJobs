@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-nVZ4v4X9+VlKqlQ4jl7V2d/OIr6m97J6AxVyU6ZZxUOtRXGZJ0Xp5m5l5q5GGCJy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,27 +15,75 @@
     <div class="d-flex justify-content-center login-box">
       <div class="login">
       	<div class="logoLogin">
-          <img src="public/img/techjobs.png" alt="" style="width: 100%; padding-top: 10px;">
+          <img src="/public/img/techjobs.png" alt="" style="width: 100%; padding-top: 10px;">
       	</div>
-				<h4 class="h4 text-center text-login">Faça seu Cadastro</h4>
-					<form id="login-forms" class="login-form formLogin">
+				<h4 class="h4 text-center" style="margin-top: -35px">Faça seu Cadastro</h4>
+				<div id="success-message" class="alert alert-success" style="display:none;">
+					O cadastro foi realizado com sucesso!
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" name="tipo" id="empresaCheckbox" value="empresa">
+					<label class="form-check-label" for="empresaCheckbox">
+						Sou empresa
+					</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" name="tipo" id="pessoaFisicaCheckbox" value="pessoaFisica">
+					<label class="form-check-label" for="pessoaFisicaCheckbox">
+						Sou pessoa física
+					</label>
+				</div>
+					<form id="cadastro-form">
 						<div class="login-form" >
 							<div class="form-group">
 								<label class="control-label">Usuário</label>
 								<input name="user" class="form-control" type="text" placeholder="Usuário:" autofocus required>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Senha</label>
-								<input name="password" class="form-control" type="password" placeholder="Senha:" required>
+								<label class="control-label">Área de Atuação</label>
+								<select class="form-control">
+									<option>Selecione uma opção</option>
+									<option>Desenvolvedor Full Stack</option>
+									<option>Desenvolvedor Front End</option>
+									<option>Desenvolvedor Back End</option>
+									<option>Analista de Suporte</option>
+									<option>Engenheiro de Software</option>
+									<option>UI/UX Designer</option>
+									<option>Analista de Sistemas</option>
+									<option>Analista de Infraestrutura</option>
+									<option>Outra</option>
+								</select>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Repita sua Senha</label>
+								<label class="control-label">Senha</label>
+								<input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
+							</div>
+							<br>
+							<div class="alert alert-primary">
+								<p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
+							</div>
+								<button type="submit" class="btn btn-dark btn-block" style="margin-bottom: 10px;"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
+						</div>
+					</form>
+					<form id="empresa-form" class="login-form formLogin" style="display:none;">
+						<div class="login-form">
+							<div class="form-group">
+								<label class="control-label">Nome da Empresa</label>
+								<input name="empresa" class="form-control" type="text" placeholder="Nome da Empresa:" autofocus required>
+							</div>
+							<div class="form-group">
+								<label class="control-label">CNPJ</label>
+								<input name="cnpj" class="form-control" type="text" placeholder="CNPJ:" required>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Senha</label>
 								<input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
 							</div>
 							<div class="alert alert-primary">
 								<p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
 							</div>
-								<button type="submit" class="btn btn-dark btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Entrar</button>
+								<button type="submit" class="btn btn-dark btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
+							</div>
 						</div>
 					</form>
 				</div>
