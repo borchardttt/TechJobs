@@ -3,10 +3,6 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color:rgba(233, 255, 255, 0.829);
-}
-
 
 h1{
     font-weight: bold;
@@ -164,4 +160,35 @@ select option:first-child {
     background-size: 18px 18px;
     padding-right: 28px;
   }
-  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.user-profile {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.card {
+    margin-bottom: 20px;
+}
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}

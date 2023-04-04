@@ -4,7 +4,8 @@
   "description": "Plataforma com busca e oferta de vagas na área de T.I",
   "main": "scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json-server": "json-server -w db.json"
   },
   "author": "",
   "license": "ISC",

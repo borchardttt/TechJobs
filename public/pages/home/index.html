@@ -1,20 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-nVZ4v4X9+VlKqlQ4jl7V2d/OIr6m97J6AxVyU6ZZxUOtRXGZJ0Xp5m5l5q5GGCJy" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechJobs - Home</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-  <h1 class="text-center">
-    estamos aqui
-  </h1>
-  </div>
-  <script src="/public/js/scripts.js"></script>
+	<div class="sidebar d-none d-md-block">
+		<div class="user-profile">
+			<img src="/public/img/eu.jfif" alt="User profile">
+			<h5>Gabriel Borchardt</h5>
+		</div>
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Perfil</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/public/pages/home/index.html">Vagas</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/index.html">Logout</a>
+			</li>
+		</ul>
+	</div>
+	<div class="main-content">
+		<h1 class="text-center">TechJobs</h1>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5>FullStack Developer</h5>
+						</div>
+						<div class="card-body">
+							<p>Millpar</p>
+							<p>Para essa vaga, exigimos um desenvolvedor analítico que tenha noções das seguintes tecnologias:</p>
+							<ul>
+								<li>JavaScript com Jquery, Vue.js.</li>
+							</ul>
+							<ul>
+								<li>PHP e Laravel.</li>
+							</ul>
+							<ul>
+								<li>HTML5, CSS3 E Bootstrap (Usamos um framework de CSS interno).</li>
+							</ul>
+							<ul>
+								<li>Docker e GIT.</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5>Backend Developer</h5>
+						</div>
+						<div class="card-body">
+							<p>FiqOn</p>
+							<p>Para essa vaga, exigimos um desenvolvedor analítico que tenha noções das seguintes tecnologias:</p>
+							<ul>
+								<li>Golang, PHP ou Java.</li>
+							</ul>
+							<ul>
+								<li>API Rest.</li>
+							</ul>
+							<ul>
+								<li>Conhecimento de POO.</li>
+							</ul>
+							<ul>
+								<li>Conhecimento em</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5>Analista de Suporte</h5>
+						</div>
+						<div class="card-body">
+							<p>Teorema Sistemas</p>
+							<p>Para essa vaga, exigimos um profissional que tenha os seguinte requisitos</p>
+							<ul>
+								<li>Desenvoltura para contato com cliente.</li>
+							</ul>
+							<ul>
+								<li>Conhecimento sobre NF-e,NFC-e, CT-e e etc.</li>
+							</ul>
+							<ul>
+								<li>Familiraridade com banco de dados Firebird</li>
+							</ul>
+							<ul>
+								<li>Disponibilidade para eventuais plantões</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5>Estagiário de Infraestrutura</h5>
+						</div>
+						<div class="card-body">
+							<p>Superpão</p>
+							<p>Para essa vaga, exigimos do estagiário os requisitos abaixo:</p>
+							<ul>
+								<li>Conhecimento sobre manutenções em servidores.</li>
+							</ul>
+							<ul>
+								<li>Suporte no uso do ERP da empresa e seus módulos.</li>
+							</ul>
+							<ul>
+								<li>Estar cursando Ensino Superior de T.I </li>
+							</ul>
+							<ul>
+								<li>Vontade de aprener e se desenvolver.</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5></h5>
+						</div>
+						<div class="card-body">
+							<p>Millpar</p>
+							<p>Para essa vaga, exigimos um desenvolvedor analítico que tenha noções das seguintes tecnologias:</p>
+							<ul>
+								<li>JavaScript com Jquery, Vue.js.</li>
+							</ul>
+							<ul>
+								<li>PHP e Laravel.</li>
+							</ul>
+							<ul>
+								<li>HTML5, CSS3 E Bootstrap (Usamos um framework de CSS interno).</li>
+							</ul>
+							<ul>
+								<li>Docker e GIT.</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header">
+							<h5>Backend Developer</h5>
+						</div>
+						<div class="card-body">
+							<p>FiqOn</p>
+							<p>Para essa vaga, exigimos um desenvolvedor analítico que tenha noções das seguintes tecnologias:</p>
+							<ul>
+								<li>Golang, PHP ou Java.</li>
+							</ul>
+							<ul>
+								<li>API Rest.</li>
+							</ul>
+							<ul>
+								<li>Conhecimento de POO.</li>
+							</ul>
+							<ul>
+								<li>Conhecimento em BACKEND</li>
+							</ul>
+							<button class="btn btn-primary" style="float:right">ME CANDIDATAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

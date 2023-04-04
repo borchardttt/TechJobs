@@ -1,21 +1,79 @@
 {
-    "users": [
-      { "id": 1, "name": "Alef" },
-      { "id": 2, "name": "Murilo" },
-      { "id": 3, "name": "Leonardo" }
-
-    ],
-    "cidades": [
-        { "id": 1, "name": "São Paulo" },
-        { "id": 2, "name": "Guarapuava" },
-        { "id": 3, "name": "Maceió" }
-  
-    ],
-    "carnes":[
-      {"id": 1, "name": "Picanha"},
-      {"id": 2, "name": "Maminha"},
-      {"id": 3, "name": "Alcatra"}
-    ]
-
+  "users": [
+    {
+      "id": 1,
+      "name": "Alef"
+    },
+    {
+      "id": 2,
+      "name": "Murilo"
+    },
+    {
+      "id": 3,
+      "name": "Leonardo"
+    },
+    {
+      "id": 4,
+      "name": "Alefer"
+    },
+    {
+      "id": 5,
+      "name": "Igor"
+    },
+    {
+      "id": 6,
+      "name": "Roni"
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 9,
+      "name": "jaon"
+    },
+    {
+      "id": 10,
+      "name": "Rrrrroni"
+    },
+    {
+      "id": 11,
+      "name": "Paulo Henrique Soares"
+    },
+    {
+      "id": 12,
+      "name": "PH Ganso"
+    },
+    {
+      "id": 13,
+      "name": "mumu marçal"
+    }
+  ],
+  "cidades": [
+    {
+      "id": 1,
+      "name": "São Paulo"
+    },
+    {
+      "id": 2,
+      "name": "Guarapuava"
+    },
+    {
+      "id": 3,
+      "name": "Maceió"
+    }
+  ],
+  "carnes": [
+    {
+      "id": 1,
+      "name": "Picanha"
+    },
+    {
+      "id": 2,
+      "name": "Maminha"
+    },
+    {
+      "id": 3,
+      "name": "Alcatra"
+    }
+  ]
 }
-  
