@@ -7,26 +7,31 @@
     <title>TechJobs - Home</title>
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
 	<div class="sidebar d-none d-md-block">
+    <button id="sidebar-toggler" class="btn-sm btn">
+      <i class="fa fa-bars bg-light" aria-hidden="true"></i>
+    </button>
 		<div class="user-profile">
 			<img src="/public/img/eu.jfif" alt="User profile">
-			<h5>Gabriel Borchardt</h5>
+			<h5 class="user-name d-none" id="nome-user">Gabriel Borchardt</h5>
 		</div>
 		<ul class="nav flex-column">
 			<li class="nav-item">
-				<a class="nav-link active" href="#">Home</a>
+				<a class="nav-link active fa fa-home" id="home" href="/public/pages/home/index.html"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Perfil</a>
+				<a class="nav-link fa fa-user fa-x" id="editUser" href="/public/pages/editUser/index.html"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/public/pages/home/index.html">Vagas</a>
+				<a class="nav-link fa fa-suitcase" id="jobs" href="/public/pages/home/index.html"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/index.html">Logout</a>
+				<a class="nav-link fa fa-sign-out" id="logout" href="/index.html"></a>
 			</li>
 		</ul>
 	</div>
@@ -185,5 +190,39 @@
 			</div>
 		</div>
 	</div>
+  <script>
+    $(document).ready(function() {
+    var sidebarExpanded = false;
+    var sidebarWidth = $('.sidebar').css('width');
+  
+    $('#sidebar-toggler').click(function() {
+      sidebarExpanded = !sidebarExpanded;
+  
+      if (sidebarExpanded) {
+        $('.sidebar').animate({ width: '200px' }, 700);
+        $('.user-profile img').animate({width: '120px'},500);
+        $('.user-profile').css('align-items', 'center');
+        $('.nav-item a').css('font-size', '1rem');
+        $("#home").prepend("<a class='home-link'> Home </a>");
+        $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
+        $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+        $("#logout").prepend("<a class='logout'> Logout </a>");
+        $('#nome-user').removeClass('d-none');
+        $('#sidebar-toggler i').addClass('fa-times');
+      } else {
+        $('.sidebar').animate({width: sidebarWidth}, 900);
+        $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
+        $('#nome-user').addClass('d-none');
+        $('.nav-item a').css('font-size', '0.9rem');
+        $(".edit-user").remove();
+        $(".home-link").remove();
+        $(".vagas").remove();
+        $(".logout").remove();
+  
+      }
+    });
+  });
+    
+    </script>
 </body>
 </html>

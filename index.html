@@ -38,5 +38,16 @@
 				</div>
 			</div>
     <script src="public/js/scripts.js"></script>
+    <script>
+      $(document).ready(function() {
+		// Adiciona a classe de animação ao elemento principal da página
+		$('.app-content').addClass('animate__animated animate__fadeInUp');
+
+		// Remove a classe de animação após 1 segundo
+		setTimeout(function() {
+			$('.app-content').removeClass('animate__animated animate__fadeInUp');
+		}, 1000);
+	});
+    </script>
   </body>
 </html>

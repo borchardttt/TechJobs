@@ -1,51 +1,82 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Alef"
+      "user": "Gabriel Borchardt",
+      "area": "Desenvolvedor Full Stack",
+      "password": "123",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Murilo"
+      "user": "alefjuan",
+      "area": "Desenvolvedor Back End",
+      "password": "alef123",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Leonardo"
+      "user": "Murilo Marçal",
+      "area": "Desenvolvedor Back End",
+      "password": "murilo123",
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "Alefer"
+      "user": "Denis",
+      "area": "Engenheiro de Software",
+      "password": "123",
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Igor"
+      "user": "Leonardo Garcia",
+      "area": "Desenvolvedor Front End",
+      "password": "123",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "Roni"
+      "user": "Maiara",
+      "area": "Analista de Sistemas",
+      "password": "123",
+      "id": 6
     },
     {
+      "user": "Leo Garcia",
+      "area": "Desenvolvedor Front End",
+      "password": "123",
       "id": 7
     },
     {
-      "id": 9,
-      "name": "jaon"
+      "user": "Gabriel Manzole",
+      "area": "Desenvolvedor Full Stack",
+      "password": "123",
+      "id": 8
     },
     {
-      "id": 10,
-      "name": "Rrrrroni"
+      "user": "Flademir",
+      "area": "Outra",
+      "password": "12345678",
+      "id": 9
     },
     {
-      "id": 11,
-      "name": "Paulo Henrique Soares"
+      "user": "Flademir",
+      "area": "Outra",
+      "password": "12345678",
+      "id": 10
     },
     {
-      "id": 12,
-      "name": "PH Ganso"
+      "user": "Renan",
+      "area": "UI/UX Designer",
+      "password": "123",
+      "id": 11
     },
     {
-      "id": 13,
-      "name": "mumu marçal"
+      "user": "assa",
+      "area": "Desenvolvedor Full Stack",
+      "password": "123",
+      "id": 12
+    },
+    {
+      "user": "Teste",
+      "area": "Desenvolvedor Full Stack",
+      "password": "123",
+      "id": 13
     }
   ],
   "cidades": [
@@ -55,25 +86,7 @@
     },
     {
       "id": 2,
-      "name": "Guarapuava"
-    },
-    {
-      "id": 3,
-      "name": "Maceió"
-    }
-  ],
-  "carnes": [
-    {
-      "id": 1,
-      "name": "Picanha"
-    },
-    {
-      "id": 2,
-      "name": "Maminha"
-    },
-    {
-      "id": 3,
-      "name": "Alcatra"
+      "name": "Rio de Janeiro"
     }
   ]
 }
