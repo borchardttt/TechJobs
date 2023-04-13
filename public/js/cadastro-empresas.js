@@ -1,16 +1,16 @@
-const formCadastro = document.querySelector('#cadastro-form');
-formCadastro.addEventListener('submit', (event) => {
+const formEmpresa = document.querySelector('#empresa-form');
+formEmpresa.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const user = document.querySelector('input[name=user]').value;
-  const area = document.querySelector('select[name=area]').value;
+  const nameEmpresa = document.querySelector('input[name=empresa]').value;
+  const cnpj = document.querySelector('input[name=cnpj]').value;
   const password = document.querySelector('input[name=password]').value;
 
   // Exibe uma janela de confirmação
   if (window.confirm('Tem certeza que deseja criar o cadastro?')) {
-    const data = { user, area, password };
+    const data = { nameEmpresa, cnpj, password };
 
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/empresas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

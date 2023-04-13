@@ -36,13 +36,32 @@
 		</ul>
 	</div>
 	<div class="main-content">
-		<h1 class="text-center">Usuários do Sistema</h1>
+    <h1 class="text-center">Usuários do Sistema</h1>
     <br>
-		<div class="container w-50">
-      <div class="card">
-        <div class="card-body">
-          <ul id="user-list" class="text-center">
-        </div>
+    <div class="container justify-content-center w-100 d-flex">
+      <div class="table-responsive table-bordered">
+        <table class="table">
+          <thead class="thead-dark">
+              <th>Usuário</th>
+              <th>Área de Atuação</th>
+          </thead>
+          <tbody id="user-list">
+              <tr data-label="Usuário"></tr>
+              <tr data-label="Área de Atuação"></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-responsive empresas-table">
+        <table class="table">
+          <thead class="thead-dark">
+              <th>Empresa</th>
+              <th>CNPJ</th>
+          </thead>
+          <tbody id="empresas-list">
+              <tr data-label="Empresa"></tr>
+              <tr data-label="CNPJ"></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

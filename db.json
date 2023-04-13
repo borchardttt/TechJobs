@@ -7,76 +7,40 @@
       "id": 1
     },
     {
-      "user": "alefjuan",
-      "area": "Desenvolvedor Back End",
-      "password": "alef123",
+      "user": "Alefer",
+      "area": "Analista de Infraestrutura",
+      "password": "123",
       "id": 2
     },
     {
-      "user": "Murilo Marçal",
+      "user": "Murilo Marçal ",
       "area": "Desenvolvedor Back End",
-      "password": "murilo123",
+      "password": "123",
       "id": 3
     },
     {
-      "user": "Denis",
-      "area": "Engenheiro de Software",
+      "user": "Alef Juan",
+      "area": "Desenvolvedor Back End",
       "password": "123",
       "id": 4
     },
     {
       "user": "Leonardo Garcia",
-      "area": "Desenvolvedor Front End",
+      "area": "Outra",
       "password": "123",
       "id": 5
     },
     {
-      "user": "Maiara",
-      "area": "Analista de Sistemas",
+      "user": "Igor Emanuel Roque",
+      "area": "Outra",
       "password": "123",
       "id": 6
     },
     {
-      "user": "Leo Garcia",
+      "user": "eduardo",
       "area": "Desenvolvedor Front End",
       "password": "123",
       "id": 7
-    },
-    {
-      "user": "Gabriel Manzole",
-      "area": "Desenvolvedor Full Stack",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "user": "Flademir",
-      "area": "Outra",
-      "password": "12345678",
-      "id": 9
-    },
-    {
-      "user": "Flademir",
-      "area": "Outra",
-      "password": "12345678",
-      "id": 10
-    },
-    {
-      "user": "Renan",
-      "area": "UI/UX Designer",
-      "password": "123",
-      "id": 11
-    },
-    {
-      "user": "assa",
-      "area": "Desenvolvedor Full Stack",
-      "password": "123",
-      "id": 12
-    },
-    {
-      "user": "Teste",
-      "area": "Desenvolvedor Full Stack",
-      "password": "123",
-      "id": 13
     }
   ],
   "cidades": [
@@ -87,6 +51,40 @@
     {
       "id": 2,
       "name": "Rio de Janeiro"
+    }
+  ],
+  "empresas": [
+    {
+      "nameEmpresa": "Pãodaria",
+      "cnpj": "0873265381",
+      "password": "",
+      "id": 2
+    },
+    {
+      "nameEmpresa": "TecnoLake",
+      "cnpj": "1234567890",
+      "password": "",
+      "id": 3
+    }
+  ],
+  "vagas": [
+    {
+      "nomeVaga": "Desenvolvedor .NET",
+      "descVaga": "Desenvolvedor .NET SENIOR",
+      "requisitos": "• .NET",
+      "id": 1
+    },
+    {
+      "nomeVaga": "Estagiário de Infraestrutura",
+      "descVaga": "Precisamos de um jovem com vontade de aprender e apreço em infraestrutura",
+      "requisitos": "• LINUX\n• HARDWARE\n• DOCUMENTOS ELETRÔNICOS\n• WINDOWS",
+      "id": 2
+    },
+    {
+      "nomeVaga": "programador",
+      "descVaga": "bom dia",
+      "requisitos": "• java",
+      "id": 3
     }
   ]
 }

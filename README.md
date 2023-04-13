@@ -17,26 +17,26 @@ Caixas de Diálogo
 
 Temporizadores
 
-- [] setInterval
+- [X] setInterval
 - [X] setTimeout
 
 Funções
 
-- [ ] Função anônima com argumento
-- [ ] Função anônima sem argumento
-- [ ] Função anônima com retorno
+- [X] Função anônima com argumento
+- [X] Função anônima sem argumento
+- [X] Função anônima com retorno
 - [X] Função auto-executável
 - [X] Função com nome
 - [X] Função aninhada/local - declarar uma função dentro de outra
-- [ ] Passagem de uma função como parâmetro
+- [X] Passagem de uma função como parâmetro
 - [X] Função Flecha - Arrow Function
 
 Eventos
 
 - [X] Evento de carregamento do documento - onload
-- [ ] Evento de movimento do mouse
+- [X] Evento de movimento do mouse
 - [X] Evento de teclado - usar charCode ou keyCode
-- [ ] Eventos de formulário - onfocus e onblur
+- [X] Eventos de formulário - onfocus e onblur
 - [X] Imprimir alguma propriedade do objeto event recebido como parâmetro
 - [X] Propagação de eventos no modelo bolha (usar target e currentTarget, ou seja, disparar o evento em um elemento filho e capturar em um elemento pai)
 
@@ -44,8 +44,8 @@ Acesso aos elementos DOM do HTML
 
 - [X] Via referência DOM pelo id do elemento HTML
 - [X] Via getElementByID()
-- [ ] Via getElementsByName()
-- [ ] Via getElementsByTagName()
+- [X] Via getElementsByName()
+- [X] Via getElementsByTagName()
 - [X] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 Tratadores de Evento
