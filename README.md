@@ -50,23 +50,23 @@ Acesso aos elementos DOM do HTML
 
 Tratadores de Evento
 
-- [ ] Especificar o tratador de evento inline
+- [X] Especificar o tratador de evento inline
 - [X] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
 - [X] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
 - [X] Usar o operador this em funções tratadoras de eventos.
 
 Objetos Nativos
 
-- [ ] Usar pelo menos 3 métodos de manipulação de array
+- [X] Usar pelo menos 3 métodos de manipulação de array
 - [X] Usar laço de repetição (for..in ou for..of ou forEach)
-- [ ] Usar pelo menos 3 métodos para manipulação de string
-- [ ] String Template
+- [X] Usar pelo menos 3 métodos para manipulação de string
+- [X] String Template
 
 Objetos
 
 - [X] Criar objeto usando função construtora ou notação literal
 - [X] Criar objetos a partir da definição de classes do ES6
-- [ ] Usar herança prototipal nativa ou herança de classes do ES6
+- [X] Usar herança prototipal nativa ou herança de classes do ES6
 
 Qualidade do código
 

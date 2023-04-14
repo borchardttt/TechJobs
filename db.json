@@ -85,6 +85,12 @@
       "descVaga": "bom dia",
       "requisitos": "• java",
       "id": 3
+    },
+    {
+      "nomeVaga": "Desenvolvedor FullStack",
+      "descVaga": "Procuramos um analista desenvolvedor que contenha os seguintes requisitos:",
+      "requisitos": "• PHP\n• LARAVEL\n• JAVASCRIPT\n• JQUERY\n• DOCKER\n• SQL\n• WSL\n• HTML\n• CSS\n• BOOTSTRAP\n",
+      "id": 4
     }
   ]
 }

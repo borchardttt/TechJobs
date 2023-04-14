@@ -69,4 +69,23 @@ class Usuario {
   }
 }
 
-const usuario = new Usuario();
+class UsuarioAdmin extends Usuario {
+  constructor() {
+    super();
+  }
+
+  mostrarConteudoAdmin() {
+    const usuarioLogado = "Gabriel Borchardt"; // substitua pelo nome do usuário logado
+
+    if (this.usuario === usuarioLogado) {
+      fetch("/public/pages/home-admin/index.html")
+        .then(response => response.text())
+        .then(data => {
+          const conteudo = document.getElementById("conteudo");
+          conteudo.innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    }
+  }
+}
+

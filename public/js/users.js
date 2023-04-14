@@ -49,3 +49,27 @@ xhr.onload = function() {
   }
 };
 xhr.send();
+
+//manipulação de array
+var filteredUsers = json.users.filter(function(user) {
+  return user.user.startsWith('A');
+});
+
+//manipulação de string
+var fullNames = json.users.map(function(user) {
+  return user.user.split(' ')[0].concat(' ', user.user.split(' ')[1]);
+});
+//string template
+function formatUserInfo(user) {
+  return `
+    <div class="user">
+      <h2>${user.name}</h2>
+      <p>${user.area}</p>
+    </div>
+  `;
+}
+
+var usersHtml = json.users.map(function(user) {
+  return formatUserInfo(user);
+}).join('');
+
