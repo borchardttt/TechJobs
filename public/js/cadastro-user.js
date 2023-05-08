@@ -1,5 +1,4 @@
 const formCadastro = document.querySelector('#cadastro-form');
-
 // Função anônima com argumento
 formCadastro.addEventListener('submit', function(event) {
   event.preventDefault();

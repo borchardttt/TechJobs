@@ -30,6 +30,12 @@
 			<li class="nav-item">
 				<a class="nav-link fa fa-suitcase" id="jobs" href="/public/pages/home/index.html"></a>
 			</li>
+      <li class="nav-item">
+				<a class="nav-link fa fa-plus" id="jobs-register" href="/public/pages/cadastroJobs/index.html"></a>
+			</li>
+      <li class="nav-item">
+				<a class="nav-link fa fa-users" id="users" href="/public/pages/users/index.html"></a>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link fa fa-sign-out" id="logout" href="/index.html"></a>
 			</li>
@@ -37,7 +43,37 @@
 	</div>
 	<div class="main-content">
 		<h1 class="text-center">TechJobs</h1>
-		<div class="container">				
+		<div class="container">
+      <div class="select-multiple">
+        <div class="select-search">
+          <input type="text" placeholder="Pesquisar">
+        </div>
+        <div class="select-dropdown select-closed">
+          <ul>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>PHP</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>Laravel</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>Docker</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>TypeScript</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>GO</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>React</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>Angular</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>VueJs</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>Linux</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>NFE</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>Suporte</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>VueJs</label></li>
+            <li><input type="checkbox" name="option" value="Option 1"> <label>SpringBoot</label></li>
+            <li><input type="checkbox" name="option" value="Option 2"> <label>Java</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>C#</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>.NET</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>RUBY ON RAILS</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>C</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>PYTHON</label></li>
+            <li><input type="checkbox" name="option" value="Option 3"> <label>JAVASCRIPT</label></li>
+          </ul>
+        </div>
+      </div>
+      <br>
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 					<div id="vagas-list">
@@ -64,7 +100,9 @@
         $("#home").prepend("<a class='home-link'> Home </a>");
         $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
         $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
         $("#logout").prepend("<a class='logout'> Logout </a>");
+        $("#users").prepend("<a class='logout'> Usuários </a>");
         $('#nome-user').removeClass('d-none');
         $('#sidebar-toggler i').addClass('fa-times');
       } else {

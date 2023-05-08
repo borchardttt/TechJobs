@@ -108,5 +108,5 @@ Web Storage
 - [X] Leitura e escrita de JSON
 
 Ajax com Backend
-
+- [X] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
 - [X] Implementação funcional (basta fazer funcionar uma requisição) do backend em ExpressJS na plataforma Node e requisições AJAX.

@@ -30,6 +30,9 @@
 			<li class="nav-item">
 				<a class="nav-link fa fa-suitcase" id="jobs" href="/public/pages/home/index.html"></a>
 			</li>
+      <li class="nav-item">
+				<a class="nav-link fa fa-plus" id="jobs-register" href="/public/pages/cadastroJobs/index.html"></a>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link fa fa-sign-out" id="logout" href="/index.html"></a>
 			</li>
@@ -76,6 +79,7 @@
         $("#home").prepend("<a class='home-link'> Home </a>");
         $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
         $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
         $("#logout").prepend("<a class='logout'> Logout </a>");
         $('#nome-user').removeClass('d-none');
         $('#sidebar-toggler i').addClass('fa-times');
@@ -92,7 +96,6 @@
       }
     });
   });
-  
     
     </script>
 </body>

@@ -7,40 +7,16 @@
       "id": 1
     },
     {
-      "user": "Alefer",
-      "area": "Analista de Infraestrutura",
+      "user": "Roni Fabio",
+      "area": "Desenvolvedor Full Stack",
       "password": "123",
       "id": 2
     },
     {
-      "user": "Murilo Marçal ",
-      "area": "Desenvolvedor Back End",
+      "user": "Teste",
+      "area": "Desenvolvedor Full Stack",
       "password": "123",
       "id": 3
-    },
-    {
-      "user": "Alef Juan",
-      "area": "Desenvolvedor Back End",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "user": "Leonardo Garcia",
-      "area": "Outra",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "user": "Igor Emanuel Roque",
-      "area": "Outra",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "user": "eduardo",
-      "area": "Desenvolvedor Front End",
-      "password": "123",
-      "id": 7
     }
   ],
   "cidades": [
@@ -53,44 +29,13 @@
       "name": "Rio de Janeiro"
     }
   ],
-  "empresas": [
-    {
-      "nameEmpresa": "Pãodaria",
-      "cnpj": "0873265381",
-      "password": "",
-      "id": 2
-    },
-    {
-      "nameEmpresa": "TecnoLake",
-      "cnpj": "1234567890",
-      "password": "",
-      "id": 3
-    }
-  ],
+  "empresas": [],
   "vagas": [
     {
       "nomeVaga": "Desenvolvedor .NET",
-      "descVaga": "Desenvolvedor .NET SENIOR",
-      "requisitos": "• .NET",
+      "descVaga": "Procuramos um profissional analítico que tenha conhecimento nos seguintes requisitos:",
+      "requisitos": "• C#\n• DOCKER\n• GIT\n• HTML",
       "id": 1
-    },
-    {
-      "nomeVaga": "Estagiário de Infraestrutura",
-      "descVaga": "Precisamos de um jovem com vontade de aprender e apreço em infraestrutura",
-      "requisitos": "• LINUX\n• HARDWARE\n• DOCUMENTOS ELETRÔNICOS\n• WINDOWS",
-      "id": 2
-    },
-    {
-      "nomeVaga": "programador",
-      "descVaga": "bom dia",
-      "requisitos": "• java",
-      "id": 3
-    },
-    {
-      "nomeVaga": "Desenvolvedor FullStack",
-      "descVaga": "Procuramos um analista desenvolvedor que contenha os seguintes requisitos:",
-      "requisitos": "• PHP\n• LARAVEL\n• JAVASCRIPT\n• JQUERY\n• DOCKER\n• SQL\n• WSL\n• HTML\n• CSS\n• BOOTSTRAP\n",
-      "id": 4
     }
   ]
 }

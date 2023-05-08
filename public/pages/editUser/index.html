@@ -30,6 +30,9 @@
 			<li class="nav-item">
 				<a class="nav-link fa fa-suitcase" id="jobs" href="/public/pages/home/index.html"></a>
 			</li>
+      <li class="nav-item">
+				<a class="nav-link fa fa-plus" id="jobs-register" href="/public/pages/cadastroJobs/index.html"></a>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link fa fa-sign-out" id="logout" href="/index.html"></a>
 			</li>
@@ -78,42 +81,41 @@
       </div>
     </div>    
 	</div>
-  <script src="/public/js/sidebar.js"></script>
 	<script src="/public/js/editar-user.js"></script>
   <script>
-  $(document).ready(function() {
-  var sidebarExpanded = false;
-  var sidebarWidth = $('.sidebar').css('width');
-
-  $('#sidebar-toggler').click(function() {
-    sidebarExpanded = !sidebarExpanded;
-
-    if (sidebarExpanded) {
-      $('.sidebar').animate({ width: '200px' }, 700);
-      $('.user-profile img').animate({width: '120px'},500);
-      $('.user-profile').css('align-items', 'center');
-      $('.nav-item a').css('font-size', '1rem');
-      $("#home").prepend("<a class='home-link'> Home </a>");
-      $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
-      $("#jobs").prepend("<a class='vagas'> Vagas </a>");
-      $("#logout").prepend("<a class='logout'> Logout </a>");
-      $('#nome-user').removeClass('d-none');
-      $('#sidebar-toggler i').addClass('fa-times');
-    } else {
-      $('.sidebar').animate({width: sidebarWidth}, 900);
-      $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
-      $('#nome-user').addClass('d-none');
-      $('.nav-item a').css('font-size', '0.9rem');
-      $(".edit-user").remove();
-      $(".home-link").remove();
-      $(".vagas").remove();
-      $(".logout").remove();
-
-    }
-  });
-});
-
+    $(document).ready(function() {
+    var sidebarExpanded = false;
+    var sidebarWidth = $('.sidebar').css('width');
   
-  </script>
+    $('#sidebar-toggler').click(function() {
+      sidebarExpanded = !sidebarExpanded;
+  
+      if (sidebarExpanded) {
+        $('.sidebar').animate({ width: '200px' }, 700);
+        $('.user-profile img').animate({width: '120px'},500);
+        $('.user-profile').css('align-items', 'center');
+        $('.nav-item a').css('font-size', '1rem');
+        $("#home").prepend("<a class='home-link'> Home </a>");
+        $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
+        $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
+        $("#logout").prepend("<a class='logout'> Logout </a>");
+        $('#nome-user').removeClass('d-none');
+        $('#sidebar-toggler i').addClass('fa-times');
+      } else {
+        $('.sidebar').animate({width: sidebarWidth}, 900);
+        $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
+        $('#nome-user').addClass('d-none');
+        $('.nav-item a').css('font-size', '0.9rem');
+        $(".edit-user").remove();
+        $(".home-link").remove();
+        $(".vagas").remove();
+        $(".logout").remove();
+  
+      }
+    });
+  });
+    
+    </script>
 </body>
 </html>

@@ -52,3 +52,65 @@ xhr.onload = function() {
   }
 };
 xhr.send();
+const selectDropdown = document.querySelector('.select-dropdown');
+const searchInput = document.querySelector('.select-search input');
+const options = Array.from(selectDropdown.querySelectorAll('li'));
+
+searchInput.addEventListener('click', () => {
+  selectDropdown.classList.remove('hidden');
+});
+
+searchInput.addEventListener('input', () => {
+  const searchValue = searchInput.value.toLowerCase();
+
+  options.forEach(option => {
+    if (option.textContent.toLowerCase().indexOf(searchValue) !== -1) {
+      option.style.display = 'block';
+    } else {
+      option.style.display = 'none';
+    }
+  });
+});
+
+options.forEach(option => {
+  const checkbox = option.querySelector('input[type="checkbox"]');
+  const label = option.querySelector('label');
+
+  checkbox.addEventListener('change', () => {
+    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('input[type="checkbox"]').value);
+    console.log(selectedOptions);
+  });
+
+  label.addEventListener('click', () => {
+    if (checkbox.checked) {
+      checkbox.checked = false;
+    } else {
+      checkbox.checked = true;
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const target = e.target;
+
+  if (!selectDropdown.contains(target) && target !== searchInput) {
+    selectDropdown.classList.add('select-closed');
+  }
+});
+
+searchInput.addEventListener('click', () => {
+  selectDropdown.classList.remove('select-closed');
+});
+
+selectDropdown.addEventListener('click', () => {
+  selectDropdown.classList.remove('select-closed');
+});
+
+options.forEach(option => {
+  const checkbox = option.querySelector('input[type="checkbox"]');
+
+  checkbox.addEventListener('change', () => {
+    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('input[type="checkbox"]').value);
+    console.log(selectedOptions);
+  });
+});
