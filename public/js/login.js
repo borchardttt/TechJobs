@@ -27,6 +27,31 @@
       console.log(`Input "${inputs[i].name}" perdeu foco.`);
     });
   }
+  $(document).ready(function() {
+    $('#login-forms').submit(function(event) {
+      event.preventDefault(); 
+      var username = $('input[name="user"]').val();
+      var password = $('input[name="password"]').val();
+      $.getJSON('db.json', function(data) {
+        var userId = null;
+        var userArea = null;
+        $.each(data.users, function(index, user) {
+          if (user.user === username && user.password === password) {
+            userId = user.id;
+            userArea = user.area;
+            return false;
+          }
+        });
   
-
-  
+        if (userId !== null) {
+          window.location.href = "public/pages/home/index.html";
+          sessionStorage.setItem("userId", userId);
+          sessionStorage.setItem("username", username);
+          sessionStorage.setItem("area", userArea);
+        } else {
+          alert("Nome de usuário ou senha incorretos.");
+        }
+      });
+    });
+  });
+  ;

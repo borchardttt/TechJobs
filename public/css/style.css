@@ -9,6 +9,12 @@ h1{
     font-size:medium
 }
 
+.div-verde{
+  background-color: green;
+  margin: 0 auto;
+  width: 50%;
+}
+
 .iframe {
 	display: block;
 	margin: 0 auto;
@@ -291,7 +297,7 @@ select option:first-child {
   .select-dropdown li {
     display: block;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
   }
   
   .select-dropdown li:last-child {
@@ -315,3 +321,69 @@ select option:first-child {
     display: none;
   }
   
+  
+  
+  .select-search input {
+    padding-right: 35px;
+  }
+  
+  .select-search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    z-index: 1; 
+  }
+  
+  .select-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1;
+  }
+  
+  .select-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .select-dropdown ul li {
+    padding: 5px;
+  }
+  
+  .selected-options {
+    margin-top: 10px;
+  }
+  
+  .selected-options .option {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  .form-group {
+    position: relative;
+  }
+
+  .validation-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 12px;
+    color: red;
+  }

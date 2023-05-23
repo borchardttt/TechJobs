@@ -17,6 +17,36 @@
       "area": "Desenvolvedor Full Stack",
       "password": "123",
       "id": 3
+    },
+    {
+      "user": "Alef Juan",
+      "area": "Desenvolvedor Back End",
+      "password": "alefjuan",
+      "id": 4
+    },
+    {
+      "user": "Murilo",
+      "area": "Outra",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "user": "Alefer Martins",
+      "area": "Engenheiro de Software",
+      "password": "Gabriel",
+      "id": 6
+    },
+    {
+      "user": "Gabriel Campos Manzole",
+      "area": "Engenheiro de Software",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "user": "Denis Lucas",
+      "area": "Professor UTFPR",
+      "password": "123",
+      "id": 8
     }
   ],
   "cidades": [
@@ -29,13 +59,32 @@
       "name": "Rio de Janeiro"
     }
   ],
-  "empresas": [],
+  "empresas": [
+    {
+      "nameEmpresa": "Tinta Laram",
+      "cnpj": "4208048210471",
+      "password": "",
+      "id": 1
+    },
+    {
+      "nameEmpresa": "Sergio Sistemas",
+      "cnpj": "12345678901",
+      "password": "",
+      "id": 2
+    }
+  ],
   "vagas": [
     {
-      "nomeVaga": "Desenvolvedor .NET",
-      "descVaga": "Procuramos um profissional analítico que tenha conhecimento nos seguintes requisitos:",
-      "requisitos": "• C#\n• DOCKER\n• GIT\n• HTML",
+      "nomeVaga": "Estagiário de TI",
+      "descVaga": "Procuramos um estagiário que tenha conhecimento em instalação de datashow.",
+      "requisitos": "• Ensino Superior (Cursando)\n• Conhecimento em Hardware\n• Boa comunicação",
       "id": 1
+    },
+    {
+      "nomeVaga": "Programador WEB",
+      "descVaga": "Programador que saiba as seguintes linguagens:",
+      "requisitos": "• PHP\n• JAVA\n• JAVASCRIPT\n• HTML\n• CSS",
+      "id": 2
     }
   ]
 }

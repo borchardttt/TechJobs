@@ -65,38 +65,39 @@
 	<script src="/public/js/cadastro-jobs.js"></script>
   <script>
     $(document).ready(function() {
-    var sidebarExpanded = false;
-    var sidebarWidth = $('.sidebar').css('width');
-  
-    $('#sidebar-toggler').click(function() {
-      sidebarExpanded = !sidebarExpanded;
-  
-      if (sidebarExpanded) {
-        $('.sidebar').animate({ width: '200px' }, 700);
-        $('.user-profile img').animate({width: '120px'},500);
-        $('.user-profile').css('align-items', 'center');
-        $('.nav-item a').css('font-size', '1rem');
-        $("#home").prepend("<a class='home-link'> Home </a>");
-        $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
-        $("#jobs").prepend("<a class='vagas'> Vagas </a>");
-        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
-        $("#logout").prepend("<a class='logout'> Logout </a>");
-        $('#nome-user').removeClass('d-none');
-        $('#sidebar-toggler i').addClass('fa-times');
-      } else {
-        $('.sidebar').animate({width: sidebarWidth}, 900);
-        $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
-        $('#nome-user').addClass('d-none');
-        $('.nav-item a').css('font-size', '0.9rem');
-        $(".edit-user").remove();
-        $(".home-link").remove();
-        $(".vagas").remove();
-        $(".logout").remove();
-  
-      }
-    });
-  });
+      var sidebarExpanded = false;
+      var sidebarWidth = $('.sidebar').css('width');
     
+      $('#sidebar-toggler').click(function() {
+        sidebarExpanded = !sidebarExpanded;
+    
+        if (sidebarExpanded) {
+          $('.sidebar').animate({ width: '200px' }, 700);
+          $('.user-profile img').animate({width: '120px'},500);
+          $('.user-profile').css('align-items', 'center');
+          $('.nav-item a').css('font-size', '1rem');
+          $("#home").prepend("<a class='home-link'> Home </a>");
+          $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
+          $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+          $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
+          $("#logout").prepend("<a class='logout'> Logout </a>");
+          $('#nome-user').removeClass('d-none');
+          $('#sidebar-toggler i').addClass('fa-times');
+        } else {
+          $('.sidebar').animate({width: sidebarWidth}, 900);
+          $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
+          $('#nome-user').addClass('d-none');
+          $('.nav-item a').css('font-size', '0.9rem');
+          $(".edit-user").remove();
+          $(".home-link").remove();
+          $(".vagas").remove();
+          $(".logout").remove();
+    
+        }
+      });
+    });
+    const username = sessionStorage.getItem("username");
+    document.getElementById("nome-user").textContent = username;
     </script>
 </body>
 </html>

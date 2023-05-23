@@ -55,6 +55,7 @@ xhr.send();
 const selectDropdown = document.querySelector('.select-dropdown');
 const searchInput = document.querySelector('.select-search input');
 const options = Array.from(selectDropdown.querySelectorAll('li'));
+const selectJobs = document.getElementById('selectJobs');
 
 searchInput.addEventListener('click', () => {
   selectDropdown.classList.remove('hidden');
@@ -77,8 +78,8 @@ options.forEach(option => {
   const label = option.querySelector('label');
 
   checkbox.addEventListener('change', () => {
-    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('input[type="checkbox"]').value);
-    console.log(selectedOptions);
+    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('label').textContent);
+    selectJobs.value = selectedOptions;
   });
 
   label.addEventListener('click', () => {
@@ -110,7 +111,54 @@ options.forEach(option => {
   const checkbox = option.querySelector('input[type="checkbox"]');
 
   checkbox.addEventListener('change', () => {
-    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('input[type="checkbox"]').value);
-    console.log(selectedOptions);
+    const selectedOptions = options.filter(option => option.querySelector('input[type="checkbox"]').checked).map(option => option.querySelector('label').textContent);
+    selectJobs.value = selectedOptions;
   });
 });
+
+// Seleciona o botão de busca e adiciona um evento de clique
+const btnSearch = document.querySelector('#btn-search');
+btnSearch.addEventListener('click', searchVagas);
+
+// Seleciona o elemento HTML que contém a lista de vagas e o elemento de alerta
+const vagasList = document.querySelector('#vagas-list');
+const alertNoVagas = document.querySelector('#alert-no-vagas');
+
+// Função que busca as vagas de acordo com o valor digitado pelo usuário
+function searchVagas() {
+  // Seleciona o input de busca e o valor digitado pelo usuário
+  const inputSearch = document.querySelector('.select-search input[type="text"]');
+  const searchValue = inputSearch.value.trim();
+
+  // Faz a requisição para a API com os requisitos informados
+  fetch(`http://localhost:3000/vagas?requisitos_like=${searchValue}`)
+    .then(response => response.json())
+    .then(vagas => {
+      // Verifica se há vagas com os requisitos informados
+      if (vagas.length > 0) {
+        // Se houver vagas, cria a lista de vagas e exibe
+        vagasList.innerHTML = '';
+        vagas.forEach(vaga => {
+          const vagaHTML = `
+              <div class="card mb-3">
+                  <div class="card-header">${vaga.nomeVaga}</div>
+                  <div class="card-body">
+                      <p class="card-text">${vaga.descVaga}</p>
+                      <ul class="list-group" style="margin: 0px 0px 16px; padding: 0px 0px 0px 17px;">
+                          ${vaga.requisitos.split('\n').map(req => `<li class="list-group">${req}</li>`).join('')}
+                      </ul>
+                      <button class="btn btn-primary pull-right">ME CANDIDATAR</button>
+                  </div>
+              </div>
+          `;
+          vagasList.insertAdjacentHTML('beforeend', vagaHTML);
+        });
+
+        alertNoVagas.classList.add('d-none');
+      } else {
+        vagasList.innerHTML = '';
+        alertNoVagas.classList.remove('d-none');
+      }
+    })
+    .catch(error => console.error(error));
+}

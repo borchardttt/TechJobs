@@ -27,61 +27,64 @@
 						Sou empresa
 					</label>
 				</div>
-					<form id="cadastro-form">
-						<div class="login-form" >
-							<div class="form-group">
-								<label class="control-label">Nome</label>
-								<input name="user" class="form-control" type="text" placeholder="Usuário:" autofocus required>
-							</div>
-							<div class="form-group">
-								<label class="control-label">Área de Atuação</label>
-								<select class="form-control" id="selectJobs" name="area">
-									<option>Selecione uma opção</option>
-									<option>Desenvolvedor Full Stack</option>
-									<option>Desenvolvedor Front End</option>
-									<option>Desenvolvedor Back End</option>
-									<option>Analista de Suporte</option>
-									<option>Engenheiro de Software</option>
-									<option>UI/UX Designer</option>
-									<option>Analista de Sistemas</option>
-									<option>Analista de Infraestrutura</option>
-									<option>Outra</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label class="control-label">Senha</label>
-								<input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
-							</div>
-							<br>
-							<div class="alert alert-primary">
-								<p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
-							</div>
-								<button type="submit" class="btn btn-dark btn-block" style="margin-bottom: 10px;"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
-						</div>
-					</form>
-					<form id="empresa-form" class="login-form formLogin" style="display:none;">
-						<div class="login-form">
-							<div class="form-group">
-								<label class="control-label">Nome da Empresa</label>
-								<input name="empresa" class="form-control" type="text" placeholder="Nome da Empresa:" autofocus required>
-							</div>
-							<div class="form-group">
-								<label class="control-label">CNPJ</label>
-								<input name="cnpj" class="form-control" type="text" id="cnjp" placeholder="CNPJ:" required>
-							</div>
-							<div class="form-group">
-								<label class="control-label">Senha</label>
-								<input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
-							</div>
-							<div class="alert alert-primary">
-								<p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
-							</div>
-								<button type="submit" class="btn btn-dark btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
+        <form id="cadastro-form">
+          <div class="login-form">
+            <div class="form-group">
+              <label class="control-label">Nome Completo</label>
+              <input name="user" class="form-control" type="text" placeholder="Nome Completo:" autofocus required>
+              <span class="validation-message"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Área de Atuação</label>
+              <select class="form-control" id="selectJobs" name="area" required>
+                <option disabled selected>Selecione uma opção</option>
+                <option>Desenvolvedor Full Stack</option>
+                <option>Desenvolvedor Front End</option>
+                <option>Desenvolvedor Back End</option>
+                <option>Analista de Suporte</option>
+                <option>Engenheiro de Software</option>
+                <option>UI/UX Designer</option>
+                <option>Analista de Sistemas</option>
+                <option>Analista de Infraestrutura</option>
+                <option id="outra">Outra</option>
+              </select>
+              <span class="validation-message"></span>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Senha</label>
+              <input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
+              <span class="validation-message"></span>
+            </div>
+            <br>
+            <div class="alert alert-primary">
+              <p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block" style="margin-bottom: 10px;"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
+          </div>
+        </form>
+        <form id="empresa-form" class="login-form formLogin" style="display:none;">
+          <div class="login-form">
+            <div class="form-group">
+              <label class="control-label">Nome da Empresa</label>
+              <input name="empresa" class="form-control" type="text" placeholder="Nome da Empresa:" autofocus required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">CNPJ</label>
+              <input name="cnpj" class="form-control" type="text" id="cnjp" placeholder="CNPJ:" required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Senha</label>
+              <input name="password" class="form-control" type="password" placeholder="Senha:" style="padding-bottom: -35px;" required>
+            </div>
+            <div class="alert alert-primary">
+              <p>Já tem uma conta? <a href="/index.html">Clique aqui para fazer login.</a></p>
+            </div>
+              <button type="submit" class="btn btn-dark btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Criar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="/public/js/scripts.js"></script>
     <script src="/public/js/cadastro-user.js"></script>
     <script src="/public/js/cadastro-empresas.js"></script>

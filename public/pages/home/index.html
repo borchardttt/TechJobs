@@ -18,7 +18,7 @@
     </button>
 		<div class="user-profile">
 			<img src="/public/img/eu.jfif" alt="User profile">
-			<h5 class="user-name d-none" id="nome-user">Gabriel Borchardt</h5>
+			<h5 class="user-name d-none" id="nome-user"></h5>
 		</div>
 		<ul class="nav flex-column">
 			<li class="nav-item">
@@ -47,8 +47,9 @@
       <div class="select-multiple">
         <div class="select-search">
           <input type="text" placeholder="Pesquisar">
-        </div>
-        <div class="select-dropdown select-closed">
+          <button class="btn btn-sm" type="submit" id="btn-search"><i class="fa fa-search text-dark"></i></button>
+        </div>        
+        <div class="select-dropdown select-closed" id="selectJobs">
           <ul>
             <li><input type="checkbox" name="option" value="Option 1"> <label>PHP</label></li>
             <li><input type="checkbox" name="option" value="Option 1"> <label>Laravel</label></li>
@@ -75,12 +76,13 @@
       </div>
       <br>
 			<div class="row justify-content-center">
-				<div class="col-md-6">
-					<div id="vagas-list">
-
-					</div>
-				</div>
-			</div>
+        <div class="col-md-6">
+          <div id="alert-no-vagas" class="alert alert-danger d-none" role="alert">
+            Nenhuma vaga encontrada com os requisitos informados.
+          </div>
+          <div id="vagas-list"></div>
+        </div>
+      </div>
 		</div>
 	</div>
   <script src="/public/js/vagas.js"></script>
@@ -118,7 +120,8 @@
       }
     });
   });
-    
+    const username = sessionStorage.getItem("username");
+    document.getElementById("nome-user").textContent = username;
     </script>
 </body>
 </html>

@@ -18,7 +18,7 @@
     </button>
 		<div class="user-profile">
 			<img src="/public/img/eu.jfif" alt="User profile">
-			<h5 class="user-name d-none" id="nome-user">Gabriel Borchardt</h5>
+			<h5 class="user-name d-none" id="nome-user"></h5>
 		</div>
 		<ul class="nav flex-column">
 			<li class="nav-item">
@@ -82,7 +82,20 @@
     </div>    
 	</div>
 	<script src="/public/js/editar-user.js"></script>
+    
   <script>
+    const nomeUser = document.getElementById('nome-user');
+    nomeUser.textContent = sessionStorage.getItem('username');
+  
+    if (sessionStorage.getItem('username')) {
+      const nomeUsuario = sessionStorage.getItem('username');
+      const inputNome = document.querySelector('#name');
+      const userArea = sessionStorage.getItem('area');
+      const inputArea = document.querySelector('#selectJobs');
+      inputArea.value = userArea;
+      inputNome.value = nomeUsuario;
+    }
+
     $(document).ready(function() {
     var sidebarExpanded = false;
     var sidebarWidth = $('.sidebar').css('width');
@@ -115,7 +128,6 @@
       }
     });
   });
-    
-    </script>
+  </script>
 </body>
 </html>
