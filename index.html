@@ -23,11 +23,11 @@
 						<div class="login-form" >
 							<div class="form-group">
 								<label class="control-label">Nome Completo</label>
-								<input name="user" class="form-control" type="text" placeholder="Nome Completo" autofocus required>
+								<input name="user" class="form-control" type="text" placeholder="Nome Completo" autofocus required  oninvalid="this.setCustomValidity('Preencha seu usuário!')">
 							</div>
 							<div class="form-group">
 								<label class="control-label">Senha</label>
-								<input name="password" class="form-control" type="password" placeholder="Senha:" required>
+								<input name="password" class="form-control" type="password" placeholder="Senha:" required oninvalid="this.setCustomValidity('Preencha sua senha!')">
 							</div>
 							<div class="alert alert-primary">
 								<p>Não tem uma conta? <a href="public/pages/cadastro/index.html">Clique aqui para criar.</a></p>
@@ -37,6 +37,7 @@
 					</form>
 				</div>
 			</div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert@2"></script>
     <script>
       $(document).ready(function() {
         $('.btn').hover(function() {

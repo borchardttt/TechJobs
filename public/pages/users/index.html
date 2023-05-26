@@ -22,19 +22,19 @@
 		</div>
 		<ul class="nav flex-column">
 			<li class="nav-item">
-				<a class="nav-link active fa fa-home" id="home" href="/public/pages/home/index.html"></a>
+				<a class="nav-link active fa fa-home" id="home" href="/home"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link fa fa-user fa-x" id="editUser" href="/public/pages/editUser/index.html"></a>
+				<a class="nav-link fa fa-user fa-x" id="editUser" href="/edit-user"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link fa fa-suitcase" id="jobs" href="/public/pages/home/index.html"></a>
+				<a class="nav-link fa fa-suitcase" id="jobs" href="/home"></a>
 			</li>
       <li class="nav-item">
-				<a class="nav-link fa fa-plus" id="jobs-register" href="/public/pages/cadastroJobs/index.html"></a>
+				<a class="nav-link fa fa-plus" id="jobs-register" href="/cadastro-vagas"></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link fa fa-sign-out" id="logout" href="/index.html"></a>
+				<a class="nav-link fa fa-sign-out" id="logout" href="/login"></a>
 			</li>
 		</ul>
 	</div>
@@ -71,8 +71,8 @@
   <script src="/public/js/users.js"></script>
   <script>
     $(document).ready(function() {
-    var sidebarExpanded = false;
-    var sidebarWidth = $('.sidebar').css('width');
+    let sidebarExpanded = false;
+    let sidebarWidth = $('.sidebar').css('width');
   
     $('#sidebar-toggler').click(function() {
       sidebarExpanded = !sidebarExpanded;

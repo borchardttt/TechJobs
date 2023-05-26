@@ -8,29 +8,45 @@ formCadastro.addEventListener('submit', function(event) {
   const password = document.querySelector('input[name=password]').value;
   let data = { user, area, password };
 
-
-  const confirmacaoCadastro = window.prompt('Tem certeza que deseja criar o cadastro?');
-
-  if (confirmacaoCadastro === 'sim') {
-    fetch('http://localhost:3000/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Cadastro realizado com sucesso:', data);
-      window.alert('Cadastro realizado com sucesso!');
-      setTimeout(function() {
-        window.location.href = 'http://localhost:3000';
-      }, 2000);
-    })
-    .catch(error => console.error('Erro ao realizar cadastro:', error));
-  }
+  swal({
+    title: "Confirmação",
+    text: "Tem certeza que deseja criar o cadastro?",
+    icon: "info",
+    buttons: {
+      cancel: "Cancelar",
+      confirm: {
+        text: "Confirmar",
+        value: "confirm"
+      }
+    }
+  }).then((value) => {
+    if (value === "confirm") {
+      fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Cadastro realizado com sucesso:', data);
+        swal({
+          title: "Sucesso",
+          text: "Cadastro realizado com sucesso!",
+          icon: "success",
+          timer: 2000,
+          buttons: false
+        }).then(() => {
+          setTimeout(() => {
+            window.location.href = '/login';
+          }, 500);
+        });
+      })
+      .catch(error => console.error('Erro ao realizar cadastro:', error));
+    }
+  });
 });
-
 
 // Função auto-executável
 (function() {
@@ -38,4 +54,4 @@ formCadastro.addEventListener('submit', function(event) {
   window.onload = function() {
     console.log('Página carregada com sucesso!');
   }
-})
+})();

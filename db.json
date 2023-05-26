@@ -47,6 +47,30 @@
       "area": "Professor UTFPR",
       "password": "123",
       "id": 8
+    },
+    {
+      "user": "Flademir",
+      "area": "Outra",
+      "password": "123",
+      "id": 9
+    },
+    {
+      "user": "Leonardo Garcia",
+      "area": "Desenvolvedor Front End",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "user": "Marcia",
+      "area": "Analista de Infraestrutura",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "user": "Gabriel B",
+      "area": "Selecione uma opção",
+      "password": "123",
+      "id": 12
     }
   ],
   "cidades": [
@@ -77,7 +101,7 @@
     {
       "nomeVaga": "Estagiário de TI",
       "descVaga": "Procuramos um estagiário que tenha conhecimento em instalação de datashow.",
-      "requisitos": "• Ensino Superior (Cursando)\n• Conhecimento em Hardware\n• Boa comunicação",
+      "requisitos": "• Ensino Superior (Cursando)\n• Suporte em Hardware\n• Boa comunicação",
       "id": 1
     },
     {
@@ -85,6 +109,30 @@
       "descVaga": "Programador que saiba as seguintes linguagens:",
       "requisitos": "• PHP\n• JAVA\n• JAVASCRIPT\n• HTML\n• CSS",
       "id": 2
+    },
+    {
+      "nomeVaga": "Analista de Sistemas SR",
+      "descVaga": "Profissional com noções em",
+      "requisitos": "• C#\n• .NET\n• BLAZOR",
+      "id": 4
+    },
+    {
+      "nomeVaga": "Estagiário de B.I",
+      "descVaga": "Estudante na área de T.I com os requisitos:",
+      "requisitos": "• SQL\n• M\n• Dedicação",
+      "id": 5
+    },
+    {
+      "nomeVaga": "Analista de Negócios de T.I",
+      "descVaga": "Dedicado e com os requisitos:\n",
+      "requisitos": "• NFE\n• SUPORTE\n• TOTVS",
+      "id": 6
+    },
+    {
+      "nomeVaga": "Coordenador de T.I",
+      "descVaga": "Procuramos uma pessoa analítica para fazer o seguinte cotidiano:",
+      "requisitos": "• Gerir equipe de T.I\n• Desenvolver melhorias para a empresa",
+      "id": 8
     }
   ]
 }
