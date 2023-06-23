@@ -75,7 +75,7 @@ class UsuarioAdmin extends Usuario {
   }
 
   mostrarConteudoAdmin() {
-    const usuarioLogado = "Gabriel Borchardt"; // substitua pelo nome do usuário logado
+    const usuarioLogado = "Gabriel Borchardt";
 
     if (this.usuario === usuarioLogado) {
       fetch("/public/pages/home-admin/index.html")
@@ -132,3 +132,87 @@ class UsuarioAdmin extends Usuario {
 
       reader.readAsDataURL(file);
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (sessionStorage.getItem('username')) {
+        const nomeUsuario = sessionStorage.getItem('username');
+        const inputNome = document.querySelector('#name');
+        const userArea = sessionStorage.getItem('area');
+        const inputArea = document.querySelector('#selectJobs');
+        if (inputNome) {
+          inputNome.value = nomeUsuario;
+        }
+        if (inputArea) {
+          inputArea.value = userArea;
+        }
+      }
+    });
+
+    function updateUser() {
+      const userId = sessionStorage.getItem('userId');
+      const areaUsuario = document.getElementById('selectJobs').value;
+      
+      const userData = {
+        area: areaUsuario
+      };
+    
+      $.ajax({
+        url: `http://localhost:3000/users/${userId}`,
+        method: 'PATCH',
+        data: JSON.stringify(userData),
+        contentType: 'application/json',
+        success: function(response) {
+          console.log('Dados do usuário atualizados com sucesso:', response);
+        },
+        error: function(error) {
+          console.error('Erro ao atualizar os dados do usuário:', error);
+        }
+      });
+    
+      const fileInput = document.getElementById('inputPhoto');
+      const photo = fileInput.files[0]; // Obtém o arquivo de foto selecionado
+    
+      const formData = new FormData();
+      formData.append('photo', photo);
+    
+      $.ajax({
+        url: 'http://localhost:3000/upload',
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          console.log('Foto enviada com sucesso:', response);
+          // Redirecione para outra página ou faça qualquer ação necessária
+        },
+        error: function(error) {
+          console.error('Erro ao enviar a foto:', error);
+        }
+      });
+    }
+    
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      updateUser();
+    });
+
+    
+    function carregarFotoUsuario() {
+      $.ajax({
+        url: 'http://localhost:3000/users',
+        method: 'GET',
+        success: function(response) {
+          if (response && Array.isArray(response) && response.length > 0) {
+            const usuario = response.find(user => user.id === parseInt(userId));
+            if (usuario && usuario.foto) {
+              const fotoUrl = `http://localhost:8000/img-users/${usuario.foto}`;
+              document.getElementById('photoPreview').src = fotoUrl;
+            }
+          }
+        },
+        error: function(error) {
+          console.error('Erro ao carregar a foto do usuário:', error);
+        }
+      });
+    }
+    carregarFotoUsuario();

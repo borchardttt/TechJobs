@@ -5,7 +5,7 @@
 
 //script para ocultar form de user CPF e aparecer o form de EMPRESA
 $(document).ready(function() {
-  $('#empresaCheckbox').change(function() {
+  $('body #empresaCheckbox').change(function() {
     if(this.checked) {
       $('#empresa-form').show();
       $('#cadastro-form').hide();

@@ -1,0 +1,127 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="sidebar d-none d-md-block">
+  <button id="sidebar-toggler" class="btn-sm btn">
+    <i class="fa fa-bars bg-light" aria-hidden="true"></i>
+  </button>
+  <div class="user-profile">
+    <img src="" alt="User profile" id="foto-user">
+    <h5 class="user-name d-none" id="nome-user"></h5>
+  </div>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active fa fa-home" id="home" href="/home"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-user fa-x" id="editUser" href="/edit-user"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-suitcase" id="jobs" href="/home"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-plus" id="jobs-register" href="cadastro-vagas"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-users" id="users" href="/users"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa fa-sign-out" id="logout" href="/login"></a>
+    </li>
+  </ul>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="public/img/techjobs.png" alt="" style="width: 50px; border-radius: 20px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse pull-right" id="navbarCollapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/edit-user">Editar Usuário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cadastro-vagas">Cadastrar Vagas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">Usuários</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    let sidebarExpanded = false;
+    let sidebarWidth = $('.sidebar').css('width');
+    $('#sidebar-toggler').click(function() {
+      sidebarExpanded = !sidebarExpanded;
+      if (sidebarExpanded) {
+        $('.sidebar').animate({ width: '200px' }, 700);
+        $('.user-profile img').animate({width: '120px'},500);
+        $('.user-profile').css('align-items', 'center');
+        $('.nav-item a').css('font-size', '1rem');
+        $("#home").prepend("<a class='home-link'> Home </a>");
+        $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
+        $("#jobs").prepend("<a class='vagas'> Vagas </a>");
+        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
+        $("#logout").prepend("<a class='logout'> Logout </a>");
+        $("#users").prepend("<a class='logout'> Usuários </a>");
+        $('#nome-user').removeClass('d-none');
+        $('#sidebar-toggler i').addClass('fa-times');
+      } else {
+        $('.sidebar').animate({width: sidebarWidth}, 900);
+        $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
+        $('#nome-user').addClass('d-none');
+        $('.nav-item a').css('font-size', '0.9rem');
+        $(".edit-user").remove();
+        $(".home-link").remove();
+        $(".vagas").remove();
+        $(".logout").remove();
+  
+      }
+    });
+  });
+    const username = sessionStorage.getItem("username");
+    document.getElementById("nome-user").textContent = username;
+
+    const userId = sessionStorage.getItem('userId');
+    function carregarFotoUsuario() {
+      $.ajax({
+        url: 'http://localhost:3000/users',
+        method: 'GET',
+        success: function(response) {
+          if (response && Array.isArray(response) && response.length > 0) {
+            const usuario = response.find(user => user.id === parseInt(userId));
+            if (usuario && usuario.foto) {
+              const fotoUrl = `http://localhost:8000/img-users/${usuario.foto}`;
+              document.getElementById('foto-user').src = fotoUrl;
+            }
+          }
+        },
+        error: function(error) {
+          console.error('Erro ao carregar a foto do usuário:', error);
+        }
+      });
+    }
+    carregarFotoUsuario();
+
+</script>
+<script>
+  var urlAtual = window.location.href;
+  var navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
+
+  navLinks.forEach(function(link) {
+    if (link.href === urlAtual) {
+      link.classList.add('active');
+    }
+  });
+</script>

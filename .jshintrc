@@ -1,0 +1,10 @@
+{
+  "esversion": 6,
+  "globals": {
+    "document": true,
+    "window": true,
+    "console": true,
+    "json": true,
+    "XMLHttpRequest": true
+  }
+}

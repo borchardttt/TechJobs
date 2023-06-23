@@ -1,0 +1,10 @@
+Usando const ou let para declarar variáveis em vez de var.
+Utilizando ponto e vírgula no final de cada instrução.
+Utilizando aspas simples para strings, a menos que precise escapar de caracteres.
+Usando arrow functions (() => {}) em vez de function para declaração de funções.
+Usando === e !== para comparação estrita de igualdade e desigualdade.
+Utilizando espaçamento bom para facilitar a leitura do código.
+Evitando linhas com mais de 80 caracteres.
+Utilizando camelCase para nomear variáveis e funções.
+Evitando o uso de variáveis globais sempre que possível.
+Utilizando comentários para explicar o código quando necessário.

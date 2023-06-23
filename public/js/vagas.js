@@ -82,8 +82,8 @@ options.forEach((option) => {
     selectJobs.value = selectedOptions;
 
     // Preenchendo o campo de entrada com base nos checkboxes selecionados
-    const checkedValues = options.filter((option) => option.querySelector('input[type="checkbox"]').checked).map((option) => option.querySelector('label').textContent);
-    searchInput.value = checkedValues.join(', ');
+    const valoresMarcados = options.filter((option) => option.querySelector('input[type="checkbox"]').checked).map((option) => option.querySelector('label').textContent);
+    searchInput.value = valoresMarcados.join(', ');
   });
 
   label.addEventListener('click', () => {
@@ -137,7 +137,6 @@ btnSearch.addEventListener('click', searchVagas);
 const vagasList = document.querySelector('#vagas-list');
 const alertNoVagas = document.querySelector('#alert-no-vagas');
 
-// Função que busca as vagas de acordo com o valor digitado pelo usuário
 function searchVagas() {
   // Seleciona o input de busca e o valor digitado pelo usuário
   const inputSearch = document.querySelector('.select-search input[type="text"]');

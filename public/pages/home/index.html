@@ -12,36 +12,10 @@
 	<link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-	<div class="sidebar d-none d-md-block">
-    <button id="sidebar-toggler" class="btn-sm btn">
-      <i class="fa fa-bars bg-light" aria-hidden="true"></i>
-    </button>
-		<div class="user-profile">
-			<img src="/public/img/eu.jfif" alt="User profile">
-			<h5 class="user-name d-none" id="nome-user"></h5>
-		</div>
-		<ul class="nav flex-column">
-			<li class="nav-item">
-				<a class="nav-link active fa fa-home" id="home" href="/home"></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link fa fa-user fa-x" id="editUser" href="/edit-user"></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link fa fa-suitcase" id="jobs" href="/home"></a>
-			</li>
-      <li class="nav-item">
-				<a class="nav-link fa fa-plus" id="jobs-register" href="cadastro-vagas"></a>
-			</li>
-      <li class="nav-item">
-				<a class="nav-link fa fa-users" id="users" href="/users"></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link fa fa-sign-out" id="logout" href="/login"></a>
-			</li>
-		</ul>
-	</div>
-	<div class="main-content">
+	<div id="sidebar"></div>
+  <br>
+  <br>
+	<div class="main-content styleMain">
 		<h1 class="text-center">TechJobs</h1>
 		<div class="container">
       <div class="select-multiple">
@@ -87,41 +61,9 @@
 	</div>
   <script src="/public/js/vagas.js"></script>
   <script>
-    $(document).ready(function() {
-    let sidebarExpanded = false;
-    let sidebarWidth = $('.sidebar').css('width');
-  
-    $('#sidebar-toggler').click(function() {
-      sidebarExpanded = !sidebarExpanded;
-  
-      if (sidebarExpanded) {
-        $('.sidebar').animate({ width: '200px' }, 700);
-        $('.user-profile img').animate({width: '120px'},500);
-        $('.user-profile').css('align-items', 'center');
-        $('.nav-item a').css('font-size', '1rem');
-        $("#home").prepend("<a class='home-link'> Home </a>");
-        $("#editUser").prepend("<a class='edit-user'> Perfil </a>");
-        $("#jobs").prepend("<a class='vagas'> Vagas </a>");
-        $("#jobs-register").prepend("<a class='vagas'> Cadastrar </a>");
-        $("#logout").prepend("<a class='logout'> Logout </a>");
-        $("#users").prepend("<a class='logout'> Usuários </a>");
-        $('#nome-user').removeClass('d-none');
-        $('#sidebar-toggler i').addClass('fa-times');
-      } else {
-        $('.sidebar').animate({width: sidebarWidth}, 900);
-        $('.user-profile img').animate({width: '50px'},700).css('height', '100%');
-        $('#nome-user').addClass('d-none');
-        $('.nav-item a').css('font-size', '0.9rem');
-        $(".edit-user").remove();
-        $(".home-link").remove();
-        $(".vagas").remove();
-        $(".logout").remove();
-  
-      }
+    $(function() {
+      $('#sidebar').load('/sidebar');
     });
-  });
-    const username = sessionStorage.getItem("username");
-    document.getElementById("nome-user").textContent = username;
-    </script>
+  </script>
 </body>
 </html>

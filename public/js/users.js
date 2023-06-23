@@ -1,5 +1,3 @@
-"use strict";
-
 function popularUsers(json) {
   const { users } = json;
   const usersRow = document.getElementById('user-list');
@@ -46,7 +44,7 @@ xhr.onload = function () {
     popularUsers(JSON.parse(xhr.responseText));
     popularEmpresas(JSON.parse(xhr.responseText));
   } else {
-    return console.error(`Erro ao obter o arquivo db.json. Status da requisição: ${xhr.status}`);
+    console.error(`Erro ao obter o arquivo db.json. Status da requisição: ${xhr.status}`);
   }
 };
 xhr.send();
@@ -54,7 +52,7 @@ xhr.send();
 // manipulação de array
 const filteredUsers = json.users.filter((user) => user.user.startsWith('A'));
 
-// manipulação de string
+// manipulação de string/ expressão regular
 const fullNames = json.users.map((user) => user.user.split(' ')[0].concat(' ', user.user.split(' ')[1]));
 // string template
 function formatUserInfo(user) {

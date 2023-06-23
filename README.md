@@ -73,7 +73,8 @@ Qualidade do código
 - [X] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
 - [X] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 - [X] Usar strict mode
-- [X] Usar Module Pattern
+- [X] Usar Module Pattern //dentro do escopo global, mas fora de qualquer objeto global, tornando-as privadas e acessíveis apenas dentro do escopo do módulo.
+
 - [X] Usar pasta assets e subpastas resources e libraries para organizar o código
 - [X] Usar let ou const ao invés de var
 - [X] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
@@ -103,10 +104,12 @@ jQuery
 
 Web Storage
 
-- [ ] LocalStorage ou SessionStorage
-- [ ] Leitura e escrita de dados simples
-- [X] Leitura e escrita de JSON
+- [X] Leitura e escrita de dados simples - dados primivos como string, number, boolean
+- [ ] Leitura e escrita de JSON - dado transformado a partir de um objeto
+- [ ] Criar e atribuir um dado em um Cookie - opcionalmente, ler e apresentar o valor na tela
 
-Ajax com Backend
+Requisições assíncronas
+
+- [X] Requisições AJAX para uma implementação funcional do backend em ExpressJS na plataforma Node
 - [X] (Obrigatório) Requisições AJAX para uma API Fake - JSON Server 
-- [X] Implementação funcional (basta fazer funcionar uma requisição) do backend em ExpressJS na plataforma Node e requisições AJAX.
+- [ ] Requisições AJAX para uma API Rest pública qualquer (Busca CEP API ou IBGE API ou outra).

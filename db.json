@@ -2,12 +2,14 @@
   "users": [
     {
       "user": "Gabriel Borchardt",
+      "foto": "eu.jfif",
       "area": "Desenvolvedor Full Stack",
       "password": "123",
       "id": 1
     },
     {
       "user": "Roni Fabio",
+      "foto": "roni.png",
       "area": "Desenvolvedor Full Stack",
       "password": "123",
       "id": 2
@@ -20,6 +22,7 @@
     },
     {
       "user": "Alef Juan",
+      "foto": "alef.jpg",
       "area": "Desenvolvedor Back End",
       "password": "alefjuan",
       "id": 4
@@ -71,6 +74,12 @@
       "area": "Selecione uma opção",
       "password": "123",
       "id": 12
+    },
+    {
+      "user": "Denis Lucas",
+      "area": "Outra",
+      "password": "123",
+      "id": 13
     }
   ],
   "cidades": [
@@ -133,6 +142,18 @@
       "descVaga": "Procuramos uma pessoa analítica para fazer o seguinte cotidiano:",
       "requisitos": "• Gerir equipe de T.I\n• Desenvolver melhorias para a empresa",
       "id": 8
+    },
+    {
+      "nomeVaga": "Professor Universitário",
+      "descVaga": "Profissional",
+      "requisitos": "• MESTRADO\n•",
+      "id": 9
+    },
+    {
+      "nomeVaga": "Teste",
+      "descVaga": "teste",
+      "requisitos": "• teste\n•",
+      "id": 10
     }
   ]
 }

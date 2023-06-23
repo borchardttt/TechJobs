@@ -69,7 +69,7 @@ formCadastro.addEventListener('submit', function(event) {
         }).then(() => {
           // Define um atraso antes de redirecionar o usuário para outra página
           setTimeout(() => {
-            window.location.href = 'http://localhost:3000';
+            window.location.href = '/home';
           }, 2000);
         });
       })
